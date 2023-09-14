@@ -112,9 +112,9 @@ export default function Home() {
     // </main>
 
     <main>
+      <Link href="/week2">Week 2</Link>
       <h1>CPRG-306-F: Web Dev 2 - Assignments</h1>
       <StudentInfo />
-      <Link href="/week2">Week 2</Link>
     </main>
   );
 }
