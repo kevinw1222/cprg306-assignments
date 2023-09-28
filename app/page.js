@@ -16,6 +16,11 @@ export default function Home() {
           <Link href="/week3">Week 3</Link>
         </button>
       </ul>
+      <ul class="m-4">
+        <button className="px-4 py-2 text-white bg-orange-500 rounded hover:bg-orange-400">
+          <Link href="/week4">Week 4</Link>
+        </button>
+      </ul>
     </main>
   );
 }

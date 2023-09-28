@@ -1,4 +1,4 @@
-// File: /Users/kevin1222/Desktop/GitHub/cprg306-assignments/app/page.js
+// File: /Users/kevin1222/Desktop/SAIT/202309_Fall/CPRG-306-F_WebDev2/cprg306-assignments/app/page.js
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
