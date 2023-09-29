@@ -42,12 +42,12 @@ export default function NewEvent() {
       <div className="min-h-screen bg-blue-gray-100 flex items-center justify-center">
         {eventCreated && (
           <div className="absolute top-0 mt-8 text-2xl text-yellow-400">
-            Event Created
+            Item added!
           </div>
         )}
         <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
           <h1 className="text-2xl text-gray-800 font-bold mb-8">
-            Item Reminder
+            Item Manager
           </h1>
           <form onSubmit={handleSubmit}>
             <label className="block mb-4">
