@@ -16,15 +16,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/week4/page.js"
     ],
-    "/week3/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/week3/page.js"
-    ],
     "/week2/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/week2/page.js"
+    ],
+    "/week3/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/week3/page.js"
     ]
   }
 }
