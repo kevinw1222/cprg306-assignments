@@ -47,11 +47,11 @@ export default function NewEvent() {
         )}
         <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
           <h1 className="text-2xl text-gray-800 font-bold mb-8">
-            Create New Event
+            Item Reminder
           </h1>
           <form onSubmit={handleSubmit}>
             <label className="block mb-4">
-              <span className="text-gray-800">Event Name:</span>
+              <span className="text-gray-800">Item Name:</span>
               <input
                 required
                 onChange={handleItemNameChange}
@@ -61,9 +61,9 @@ export default function NewEvent() {
             </label>
 
             <label className="block mb-4">
-              <span className="text-gray-800">Event Date:</span>
+              <span className="text-gray-800">Quantity:</span>
               <input
-                type="date"
+                type="number"
                 required
                 onChange={handleQuantity}
                 value={quantity}
@@ -72,8 +72,8 @@ export default function NewEvent() {
             </label>
 
             <label className="block mb-4 ">
-              <span className="text-gray-800">Event Location:</span>
-              <input
+              <span className="text-gray-800">Category:</span>
+              <select
                 required
                 onChange={handleCategory}
                 value={category}
@@ -81,22 +81,11 @@ export default function NewEvent() {
               />
             </label>
 
-            {/* <label className="block mb-4">
-              <span className="text-gray-800">Event Description:</span>
-              <textarea
-                required
-                onChange={handleDescriptionChange}
-                value={description}
-                className="mt-1 p-1 block w-full rounded-md text-black bg-gray-100 focus:bg-white"
-                rows="3"
-              />
-            </label>
- */}
             <button
               type="submit"
               className="w-full py-2 px-4 bg-sky-600 hover:bg-sky-500 rounded-md text-white"
             >
-              Create Event
+              Commit
             </button>
           </form>
         </div>

@@ -1,5 +1,5 @@
 {
-  "/week2/page": "app/week2/page.js",
   "/page": "app/page.js",
-  "/week4/page": "app/week4/page.js"
+  "/week4/page": "app/week4/page.js",
+  "/week2/page": "app/week2/page.js"
 }
