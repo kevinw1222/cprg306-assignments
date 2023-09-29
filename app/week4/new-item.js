@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function NewEvent() {
   const [itemName, setItemName] = useState("");
   const [quantity, setQuantity] = useState(1);
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("Produce");
   const [eventCreated, setEventCreated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -22,7 +22,7 @@ export default function NewEvent() {
 
     setItemName("");
     setQuantity(1);
-    setCategory("");
+    setCategory("Produce");
   };
 
   const handleItemNameChange = (event) => {
@@ -78,7 +78,16 @@ export default function NewEvent() {
                 onChange={handleCategory}
                 value={category}
                 className="mt-1 p-1 block w-full rounded-md text-black bg-gray-100 focus:bg-white"
-              />
+              >
+                <option value="" disabled selected>
+                  Select a category
+                </option>
+                <option value="produce">Produce</option>
+                <option value="diary">Dairy</option>
+                <option value="bakery">Bakery</option>
+                <option value="meat">Meat</option>
+                <option value="bakery">Bakery</option>
+              </select>
             </label>
 
             <button
