@@ -614,6 +614,9 @@ video {
 .justify-between {
   justify-content: space-between;
 }
+.gap-10 {
+  gap: 2.5rem;
+}
 .rounded {
   border-radius: 0.25rem;
 }
