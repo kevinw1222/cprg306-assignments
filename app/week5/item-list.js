@@ -29,7 +29,7 @@ export default function ItemList() {
 
         <ul>
           {sortedItems.map((item) => (
-            <Item
+            <ItemList
               key={items.id}
               itemName={items.name}
               quantity={items.quantity}
