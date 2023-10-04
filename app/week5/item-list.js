@@ -5,39 +5,40 @@ import items from "./items.json";
 
 export default function ItemList() {
   const [sortBy, setSortBy] = useState("name");
-  const sortedItems = [...items];
+  const sortedItems = items;
 
-  if (sortBy === "name") {
+  console.log(sortedItems);
+
+  if (sortBy === "name")
     sortedItems.sort((a, b) => a.name.localeCompare(b.name));
-  } else if (sortBy === "quantity") {
+  else if (sortBy === "quantity")
     sortedItems.sort((a, b) => a.quantity - b.quantity);
 
-    const handleSortByName = () => {
-      setSortBy("name");
-    };
+  const handleSortByName = () => {
+    setSortBy("name");
+  };
 
-    const handleSortByCategory = () => {
-      setSortBy("category");
-    };
+  const handleSortByCategory = () => {
+    setSortBy("category");
+  };
 
-    return (
-      <main>
-        <div>
-          <button onClick={handleSortByName}>Sort by Name</button>
-          <button onClick={handleSortByCategory}>Sort by Category</button>
-        </div>
+  return (
+    <main>
+      <div>
+        <button onClick={handleSortByName}>Sort by Name</button>
+        <button onClick={handleSortByCategory}>Sort by Category</button>
+      </div>
 
-        <ul>
-          {sortedItems.map((item) => (
-            <ItemList
-              key={items.id}
-              itemName={items.name}
-              quantity={items.quantity}
-              category={items.category}
-            />
-          ))}
-        </ul>
-      </main>
-    );
-  }
+      <ul>
+        {sortedItems.map((item) => (
+          <Item
+            key={item.id}
+            name={item.name}
+            quantity={item.quantity}
+            category={item.category}
+          />
+        ))}
+      </ul>
+    </main>
+  );
 }
