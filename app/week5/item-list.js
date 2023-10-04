@@ -9,10 +9,11 @@ export default function ItemList() {
 
   console.log(sortedItems);
 
-  if (sortBy === "name")
+  if (sortBy === "name") {
     sortedItems.sort((a, b) => a.name.localeCompare(b.name));
-  else if (sortBy === "quantity")
+  } else if (sortBy === "quantity") {
     sortedItems.sort((a, b) => a.quantity - b.quantity);
+  }
 
   const handleSortByName = () => {
     setSortBy("name");
