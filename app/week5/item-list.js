@@ -30,10 +30,10 @@ export default function ItemList() {
         <ul>
           {sortedItems.map((item) => (
             <Item
-              key={item.id}
-              itemName={item.name}
-              quantity={item.quantity}
-              category={item.category}
+              key={items.id}
+              itemName={items.name}
+              quantity={items.quantity}
+              category={items.category}
             />
           ))}
         </ul>
