@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "pages": {}
 =======
   "pages": {
@@ -9,11 +10,15 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+=======
+  "pages": {
+>>>>>>> parent of d5b9669 (is building)
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
+<<<<<<< HEAD
     "/week5/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -26,4 +31,13 @@
     ]
   }
 >>>>>>> parent of 93cd20e (is building)
+=======
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ]
+  }
+>>>>>>> parent of d5b9669 (is building)
 }
