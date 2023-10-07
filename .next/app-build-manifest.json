@@ -1,43 +1,20 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "pages": {}
-=======
   "pages": {
-    "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
-    ],
-=======
-  "pages": {
->>>>>>> parent of d5b9669 (is building)
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-<<<<<<< HEAD
-    "/week5/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/week5/page.js"
-    ],
-    "/week3/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/week3/page.js"
-    ]
-  }
->>>>>>> parent of 93cd20e (is building)
-=======
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
+    ],
+    "/week5/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/week5/page.js"
     ]
   }
->>>>>>> parent of d5b9669 (is building)
 }
