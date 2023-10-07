@@ -1,4 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 *.psd filter=lfs diff=lfs merge=lfs -text
+/Users/kevin1222/Desktop/SAIT/202309_Fall/CPRG-306-F_WebDev2/cprg306-assignments/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node filter=lfs diff=lfs merge=lfs -text
 *.node filter=lfs diff=lfs merge=lfs -text
