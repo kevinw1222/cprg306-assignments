@@ -22,13 +22,8 @@
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-<<<<<<< HEAD
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-=======
 /******/ 			id: moduleId,
 /******/ 			loaded: false,
->>>>>>> parent of d5b9669 (is building)
 /******/ 			exports: {}
 /******/ 		};
 /******/ 	
@@ -41,12 +36,9 @@
 /******/ 			if(threw) delete __webpack_module_cache__[moduleId];
 /******/ 		}
 /******/ 	
-<<<<<<< HEAD
-=======
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
 /******/ 	
->>>>>>> parent of d5b9669 (is building)
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
@@ -127,12 +119,6 @@
 /******/ 		// This function allow to reference async chunks and sibling chunks for the entrypoint
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-<<<<<<< HEAD
-/******/ 			return undefined;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-=======
 /******/ 			return "" + chunkId + ".js";
 /******/ 		};
 /******/ 	})();
@@ -142,7 +128,6 @@
 /******/ 		__webpack_require__.h = () => ("f27ecaf6d657e87b")
 /******/ 	})();
 /******/ 	
->>>>>>> parent of d5b9669 (is building)
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -159,8 +144,6 @@
 /******/ 		};
 /******/ 	})();
 /******/ 	
-<<<<<<< HEAD
-=======
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nmd = (module) => {
@@ -170,7 +153,6 @@
 /******/ 		};
 /******/ 	})();
 /******/ 	
->>>>>>> parent of d5b9669 (is building)
 /******/ 	/* webpack/runtime/startup entrypoint */
 /******/ 	(() => {
 /******/ 		__webpack_require__.X = (result, chunkIds, fn) => {
