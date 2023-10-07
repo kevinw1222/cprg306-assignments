@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-{}
-=======
 {
-  "/week5/page": "app/week5/page.js",
-  "/week3/page": "app/week3/page.js"
+  "/page": "app/page.js",
+  "/week5/page": "app/week5/page.js"
 }
->>>>>>> parent of 93cd20e (is building)
-=======
-{
-  "/page": "app/page.js"
-}
->>>>>>> parent of d5b9669 (is building)
