@@ -8,14 +8,6 @@ export default function ItemList() {
   const sortedItems = [...items];
   const [sortedAndGroupedItems, setSortedAndGroupedItems] = useState(null);
 
-  const handleSort = (sortingOption) => {
-    setSortBy(sortingOption);
-
-    if (sortingOption === "category") {
-      setSortedAndGroupedItems(null);
-    }
-  };
-
   if (sortBy === "name")
     sortedItems.sort((a, b) => a.name.localeCompare(b.name));
   else if (sortBy === "category")
