@@ -30,7 +30,7 @@ export default function Page() {
       <section>
         {user ? (
           <div>
-            <p>Welcome, {user.email}</p>
+            <p>Welcome, {user.displayName}</p>
             <img src={user.photoURL} className="w-10 h-10" />
             <button
               className="text-lg m-2 hover:underline"
