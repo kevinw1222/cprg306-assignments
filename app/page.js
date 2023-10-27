@@ -28,6 +28,14 @@ export default function Home() {
         </button>
 
         <button className="px-4 py-2 text-white bg-orange-500 rounded hover:bg-orange-400">
+          <Link href="/week6">Week 6</Link>
+        </button>
+
+        <button className="px-4 py-2 text-white bg-orange-500 rounded hover:bg-orange-400">
+          <Link href="/week7">Week 7</Link>
+        </button>
+
+        <button className="px-4 py-2 text-white bg-orange-500 rounded hover:bg-orange-400">
           <Link href="/week8">Week 8</Link>
         </button>
       </nav>

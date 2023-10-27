@@ -1,30 +1,30 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/week8/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/week8/page.js"
+      "static/chunks/app/page.js"
     ],
-    "/week8/layout": [
+    "/week5/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/week8/layout.js"
+      "static/chunks/app/week5/page.js"
     ],
-    "/week8/protected/page": [
+    "/week6/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/week8/protected/page.js"
+      "static/chunks/app/week6/page.js"
+    ],
+    "/week4/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/week4/page.js"
     ]
   }
 }

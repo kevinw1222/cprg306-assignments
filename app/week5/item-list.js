@@ -5,13 +5,9 @@ import items from "./items.json";
 
 export default function ItemList() {
   const [sortBy, setSortBy] = useState("name");
+  const [isGrouped, setIsGrouped] = useState(false);
   const sortedItems = [...items];
   const [sortedAndGroupedItems, setSortedAndGroupedItems] = useState(null);
-
-  if (sortBy === "name")
-    sortedItems.sort((a, b) => a.name.localeCompare(b.name));
-  else if (sortBy === "category")
-    sortedItems.sort((a, b) => a.category.localeCompare(b.category));
 
   const renderSortButton = (buttonSortBy, label) => (
     <button
@@ -21,6 +17,14 @@ export default function ItemList() {
       {label}
     </button>
   );
+
+  const toggleGrouping = () => {
+    setIsGrouped(!isGrouped);
+    if (isGrouped) {
+      setSortedAndGroupedItems(null);
+      setSortBy("name");
+    } else groupAndSortByCategory();
+  };
 
   const groupAndSortByCategory = () => {
     const groupedItems = items.reduce((grouped, item) => {
@@ -47,6 +51,11 @@ export default function ItemList() {
     setSortedAndGroupedItems(sortedAndGroupedItems);
   };
 
+  if (sortBy === "name")
+    sortedItems.sort((a, b) => a.name.localeCompare(b.name));
+  else if (sortBy === "category")
+    sortedItems.sort((a, b) => a.category.localeCompare(b.category));
+
   return (
     <div>
       <div>
@@ -54,9 +63,9 @@ export default function ItemList() {
         {renderSortButton("category", "Sort by Category")}
         <button
           className="px-2 py-2 ml-4 mt-4 text-black bg-orange-500 rounded hover:bg-orange-400"
-          onClick={groupAndSortByCategory}
+          onClick={toggleGrouping}
         >
-          Group by Category
+          {isGrouped ? "Reset" : " Group by Category"}
         </button>
       </div>
       <ul>
