@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import Item from "./item";
-import itemsData from "./items.json";
+import items from "./items.json";
 
-export default function ItemList({ items }) {
+export default function ItemList() {
   const [sortBy, setSortBy] = useState("name");
   const [isGrouped, setIsGrouped] = useState(false);
   const sortedItems = [...items];
@@ -17,27 +17,13 @@ export default function ItemList({ items }) {
       {label}
     </button>
   );
+
   const toggleGrouping = () => {
     setIsGrouped(!isGrouped);
     if (isGrouped) {
       setSortedAndGroupedItems(null);
       setSortBy("name");
     } else groupAndSortByCategory();
-  };
-
-  const handleDeleteItem = (itemId) => {
-    const updatedItems = items.filter((item) => item.id !== itemId);
-    setItems(updatedItems);
-  };
-
-  const handleUpdateQuantity = (itemId, newQuantity) => {
-    const updatedItems = items.map((item) => {
-      if (item.id === itemId) {
-        return { ...item, quantity: newQuantity };
-      }
-      return item;
-    });
-    setItems(updatedItems);
   };
 
   const groupAndSortByCategory = () => {
@@ -63,12 +49,12 @@ export default function ItemList({ items }) {
       []
     );
     setSortedAndGroupedItems(sortedAndGroupedItems);
-
-    if (sortBy === "name")
-      sortedItems.sort((a, b) => a.name.localeCompare(b.name));
-    else if (sortBy === "category")
-      sortedItems.sort((a, b) => a.category.localeCompare(b.category));
   };
+
+  if (sortBy === "name")
+    sortedItems.sort((a, b) => a.name.localeCompare(b.name));
+  else if (sortBy === "category")
+    sortedItems.sort((a, b) => a.category.localeCompare(b.category));
 
   return (
     <div>
@@ -107,24 +93,6 @@ export default function ItemList({ items }) {
                 category={item.category}
               />
             ))}
-      </ul>
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            {item.name} - Quantity: {item.quantity} - Category:{item.category}
-            <button onClick={() => handleDeleteItem(item.id)}>Delete</button>
-            <button
-              onClick={() => handleUpdateQuantity(item.id, item.quantity + 1)}
-            >
-              Increment
-            </button>
-            <button
-              onClick={() => handleUpdateQuantity(item.id, item.quantity - 1)}
-            >
-              Decrement
-            </button>
-          </li>
-        ))}
       </ul>
     </div>
   );

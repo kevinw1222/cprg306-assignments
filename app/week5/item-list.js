@@ -1,13 +1,13 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Item from "./item";
 import items from "./items.json";
 
 export default function ItemList() {
   const [sortBy, setSortBy] = useState("name");
   const [isGrouped, setIsGrouped] = useState(false);
-  const sortedItems = [...items];
   const [sortedAndGroupedItems, setSortedAndGroupedItems] = useState(null);
+  const sortedItems = [...items];
 
   const renderSortButton = (buttonSortBy, label) => (
     <button
@@ -17,6 +17,11 @@ export default function ItemList() {
       {label}
     </button>
   );
+
+  useEffect(() => {
+    if (!isGrouped) groupAndSortByCategory(null);
+    else setSortedAndGroupedItems(null);
+  }, [isGrouped, items]);
 
   const toggleGrouping = () => {
     setIsGrouped(!isGrouped);
@@ -49,6 +54,21 @@ export default function ItemList() {
       []
     );
     setSortedAndGroupedItems(sortedAndGroupedItems);
+  };
+
+  const handleDeleteItem = (itemId) => {
+    const updatedItems = items.filter((item) => item.id !== itemId);
+    onDeleteItem(updatedItems);
+  };
+
+  const handleUpdateQuantity = (itemId, newQuantity) => {
+    const updatedItems = items.map((item) => {
+      if (item.id === itemId) {
+        return { ...item, quantity: newQuantity };
+      }
+      return item;
+    });
+    onUpdateQuantity(updatedItems);
   };
 
   if (sortBy === "name")
@@ -91,6 +111,8 @@ export default function ItemList() {
                 name={item.name}
                 quantity={item.quantity}
                 category={item.category}
+                onDeleteItem={handleDeleteItem}
+                onUpdateQuantity={handleUpdateQuantity}
               />
             ))}
       </ul>

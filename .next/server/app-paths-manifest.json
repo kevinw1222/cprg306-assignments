@@ -1,6 +1,5 @@
 {
   "/page": "app/page.js",
-  "/week5/page": "app/week5/page.js",
   "/week6/page": "app/week6/page.js",
   "/week4/page": "app/week4/page.js"
 }

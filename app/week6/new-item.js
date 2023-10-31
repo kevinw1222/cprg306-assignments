@@ -2,30 +2,32 @@
 import { useState } from "react";
 
 export default function NewItem({ onAddItem }) {
-  const [itemName, setItemName] = useState("");
+  const [item, setItem] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState("Produce");
   const [eventCreated, setEventCreated] = useState(false);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
     const newItem = {
-      itemName,
+      item,
       quantity,
       category,
     };
 
     console.log(newItem);
-    onAddItem(NewItem);
+
     setEventCreated(true);
-    setItemName("");
-    setQuantity("");
-    setCategory("");
+
+    onAddItem(newItem);
+    setItem("");
+    setQuantity(1);
+    setCategory("Produce");
   };
 
-  const handleItemNameChange = (event) => {
-    setItemName(event.target.value);
+  const handleItemChange = (event) => {
+    setItem(event.target.value);
   };
 
   const handleQuantity = (event) => {
@@ -53,8 +55,8 @@ export default function NewItem({ onAddItem }) {
               <span className="text-gray-800">Item Name:</span>
               <input
                 required
-                onChange={handleItemNameChange}
-                value={itemName}
+                onChange={handleItemChange}
+                value={item}
                 className="mt-1 p-1 block w-full rounded-md text-black bg-gray-100 focus:bg-white"
               />
             </label>
@@ -93,7 +95,7 @@ export default function NewItem({ onAddItem }) {
               type="submit"
               className="w-full py-2 px-4 bg-sky-600 hover:bg-sky-500 rounded-md text-white"
             >
-              Add Item
+              Add
             </button>
           </form>
         </div>

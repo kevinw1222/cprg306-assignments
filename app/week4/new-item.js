@@ -1,17 +1,17 @@
 "use client";
 import { useState } from "react";
 
-export default function NewEvent() {
-  const [itemName, setItemName] = useState("");
+export default function NewItem() {
+  const [item, setItem] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState("Produce");
   const [eventCreated, setEventCreated] = useState(false);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
     const newEvent = {
-      itemName,
+      item,
       quantity,
       category,
     };
@@ -19,13 +19,13 @@ export default function NewEvent() {
 
     setEventCreated(true);
 
-    setItemName("");
+    setItem("");
     setQuantity(1);
     setCategory("Produce");
   };
 
-  const handleItemNameChange = (event) => {
-    setItemName(event.target.value);
+  const handleItemChange = (event) => {
+    setItem(event.target.value);
   };
 
   const handleQuantity = (event) => {
@@ -53,8 +53,8 @@ export default function NewEvent() {
               <span className="text-gray-800">Item Name:</span>
               <input
                 required
-                onChange={handleItemNameChange}
-                value={itemName}
+                onChange={handleItemChange}
+                value={item}
                 className="mt-1 p-1 block w-full rounded-md text-black bg-gray-100 focus:bg-white"
               />
             </label>
@@ -93,7 +93,7 @@ export default function NewEvent() {
               type="submit"
               className="w-full py-2 px-4 bg-sky-600 hover:bg-sky-500 rounded-md text-white"
             >
-              Commit
+              Add
             </button>
           </form>
         </div>
