@@ -3,7 +3,7 @@ import { useState } from "react";
 import Item from "./item";
 import items from "./items.json";
 
-export default function ItemList() {
+export default function ItemList( {items}) {
   const [sortBy, setSortBy] = useState("name");
   const [isGrouped, setIsGrouped] = useState(false);
   const sortedItems = [...items];
@@ -48,7 +48,7 @@ export default function ItemList() {
       },
       []
     );
-    setSortedAndGroupedItems(sortedAndGroupedItems);
+    setSortedAndGroupedItems(sortedAndGroupedItems, category);
   };
 
   if (sortBy === "name")
