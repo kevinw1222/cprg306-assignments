@@ -10,7 +10,6 @@ export default function Page() {
   const handleAddItem = (newItem) => {
     // setItems((prevItems) => [...prevItems, newItem]);
     setItems([...items, newItem]);
-    console.log("Adding item");
   };
 
   return (

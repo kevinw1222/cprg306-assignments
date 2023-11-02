@@ -11,9 +11,9 @@ export default function NewItem({ onAddItem }) {
     e.preventDefault();
 
     const newItem = {
-      item,
-      quantity,
-      category,
+      name: item.toLowerCase(),
+      quantity: quantity,
+      category: category.toLowerCase(),
     };
 
     console.log(newItem);
@@ -21,6 +21,7 @@ export default function NewItem({ onAddItem }) {
     setEventCreated(true);
 
     onAddItem(newItem);
+
     setItem("");
     setQuantity(1);
     setCategory("Produce");
