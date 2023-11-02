@@ -8,7 +8,6 @@ import Link from "next/link.js";
 export default function Page() {
   const [items, setItems] = useState(itemsData);
   const handleAddItem = (newItem) => {
-    // setItems((prevItems) => [...prevItems, newItem]);
     setItems([...items, newItem]);
   };
 

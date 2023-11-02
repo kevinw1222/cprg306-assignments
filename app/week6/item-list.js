@@ -7,7 +7,6 @@ export default function ItemList({ items }) {
 
   const [isGrouped, setIsGrouped] = useState(false);
   const sortedItems = [...items];
-  // const [sortedAndGroupedItems, setSortedAndGroupedItems] = useState(null);
 
   const [groupedItems, setGroupedItems] = useState({});
 
@@ -42,8 +41,6 @@ export default function ItemList({ items }) {
 
       return accumulator;
     }, {});
-    // const groupedItems = items.reduce((grouped, item) => {
-    //   const category = item.category;
 
     //   if (!grouped[category]) {
     //     grouped[category] = [];
@@ -126,33 +123,6 @@ export default function ItemList({ items }) {
               />
             ))}
       </ul>
-
-      {/* <ul>
-        {sortedAndGroupedItems
-          ? sortedAndGroupedItems.map((category) => (
-              <li key={category.category}>
-                <h2 className="text-lg capitalize">{category.category}</h2>
-                <ul>
-                  {category.items.map((item) => (
-                    <Item
-                      key={item.id}
-                      name={item.name}
-                      quantity={item.quantity}
-                      category={item.category}
-                    />
-                  ))}
-                </ul>
-              </li>
-            ))
-          : sortedItems.map((item) => (
-              <Item
-                key={item.id}
-                name={item.name}
-                quantity={item.quantity}
-                category={item.category}
-              />
-            ))}
-      </ul> */}
     </div>
   );
 }
